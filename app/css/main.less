@@ -1,0 +1,109 @@
+@green: #20ae88;
+@white: #fff;
+
+
+.font(@fontName; @urlName: @fontName; @weight: normal; @style: normal) {
+  font-family: '@{fontName}';
+  src: url('../fonts/@{urlName}/@{urlName}.eot');
+  src: url('../fonts/@{urlName}/@{urlName}.eot#iefix') format('embedded-opentype'),
+  url('../fonts/@{urlName}/@{urlName}.woff') format('woff'),
+    url('../fonts/@{urlName}/@{urlName}.ttf') format('truetype'),
+    url('../fonts/@{urlName}/@{urlName}.svg') format('svg');
+    font-weight: @weight;
+    font-style: @style;
+}
+
+
+@fontRegular: 'GloberThin';
+@fontBold: '@{fontRegular}-Bold';
+
+@font-face {
+  .font(@fontRegular);
+}
+@font-face {
+  .font(@fontRegular; @fontBold; bold);
+}
+
+
+
+
+
+
+html {
+    font-size: 1px;
+}
+body {
+  font-family: @fontRegular;
+}
+h1 {
+  text-align:center; 
+  padding-top:50px; 
+  padding-bottom:50px;
+  margin: 0;
+}
+
+nav {
+  position: absolute;
+  a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    font-size: 1em;
+    padding: 8px 0;
+  }
+  a:hover,
+  a:focus {
+    outline: none;
+  }
+  a::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #20ae88;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+  a:hover::after,
+  a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+
+
+
+.image-head {
+    width: 100%;
+    height: 600px;
+    background-image: url('../images/background.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: none;
+}
+.services {
+      background-image: url('../images/background_2.png');
+      font-size: 24rem;
+}
+.gallery, 
+.prices {
+  background: @green;
+  color: @white;
+}
