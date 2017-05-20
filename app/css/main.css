@@ -84,5 +84,5 @@ nav a:focus::after {
 .gallery,
 .prices {
   background: #20ae88;
-  color: #fff;
+  color: blue;
 }
