@@ -37,6 +37,7 @@ h1 {
   margin: 0;
 }
 nav {
+  z-index: 999;
   position: absolute;
 }
 nav a {
@@ -88,6 +89,13 @@ nav a:focus::after {
   background-size: cover;
   background-repeat: none;
 }
+.image-head .layer {
+  background-color: #232631;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: inherit;
+}
 .services {
   background-image: url('../images/background_2.jpg');
   font-size: 24rem;
@@ -96,4 +104,26 @@ nav a:focus::after {
 .prices {
   background: #20ae88;
   color: blue;
+}
+.luna {
+  position: relative;
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  top: 25%;
+}
+.luna .luna-caption {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  font-size: 36px;
+  color: white;
+  width: 150px;
+  line-height: 55px;
+}
+.qhcmUktk_0 {
+  stroke-dasharray: 610 612;
+  stroke-dashoffset: 611;
+  stroke-opacity: 1;
+  stroke-width: 0;
 }
