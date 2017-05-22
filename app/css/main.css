@@ -1,22 +1,33 @@
 @font-face {
-  font-family: 'GloberThin';
-  src: url('../fonts/GloberThin/GloberThin.eot');
-  src: url('../fonts/GloberThin/GloberThin.eot#iefix') format('embedded-opentype'), url('../fonts/GloberThin/GloberThin.woff') format('woff'), url('../fonts/GloberThin/GloberThin.ttf') format('truetype'), url('../fonts/GloberThin/GloberThin.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Gravity-Light';
+  src: url('../fonts/Gravity/Gravity-Light/Gravity-Light.eot');
+  src: url('../fonts//Gravity/Gravity-Light/Gravity-Light.eot#iefix') format('embedded-opentype'), url('../fonts//Gravity/Gravity-Light/Gravity-Light.woff') format('woff'), url('../fonts//Gravity/Gravity-Light/Gravity-Light.otf') format('woff'), url('../fonts//Gravity/Gravity-Light/Gravity-Light.ttf') format('truetype'), url('../fonts//Gravity/Gravity-Light/Gravity-Light.svg') format('svg');
 }
 @font-face {
-  font-family: 'GloberThin';
-  src: url('../fonts/GloberThin-Bold/GloberThin-Bold.eot');
-  src: url('../fonts/GloberThin-Bold/GloberThin-Bold.eot#iefix') format('embedded-opentype'), url('../fonts/GloberThin-Bold/GloberThin-Bold.woff') format('woff'), url('../fonts/GloberThin-Bold/GloberThin-Bold.ttf') format('truetype'), url('../fonts/GloberThin-Bold/GloberThin-Bold.svg') format('svg');
-  font-weight: bold;
-  font-style: normal;
+  font-family: 'Gravity-Regular';
+  src: url('../fonts/Gravity/Gravity-Regular/Gravity-Regular.eot');
+  src: url('../fonts//Gravity/Gravity-Regular/Gravity-Regular.eot#iefix') format('embedded-opentype'), url('../fonts//Gravity/Gravity-Regular/Gravity-Regular.woff') format('woff'), url('../fonts//Gravity/Gravity-Regular/Gravity-Regular.otf') format('woff'), url('../fonts//Gravity/Gravity-Regular/Gravity-Regular.ttf') format('truetype'), url('../fonts//Gravity/Gravity-Regular/Gravity-Regular.svg') format('svg');
+}
+@font-face {
+  font-family: 'Gravity-Medium';
+  src: url('../fonts/Gravity/Gravity-Medium/Gravity-Medium.eot');
+  src: url('../fonts//Gravity/Gravity-Medium/Gravity-Medium.eot#iefix') format('embedded-opentype'), url('../fonts//Gravity/Gravity-Medium/Gravity-Medium.woff') format('woff'), url('../fonts//Gravity/Gravity-Medium/Gravity-Medium.otf') format('woff'), url('../fonts//Gravity/Gravity-Medium/Gravity-Medium.ttf') format('truetype'), url('../fonts//Gravity/Gravity-Medium/Gravity-Medium.svg') format('svg');
+}
+@font-face {
+  font-family: 'Gravity-Bold';
+  src: url('../fonts/Gravity/Gravity-Bold/Gravity-Bold.eot');
+  src: url('../fonts//Gravity/Gravity-Bold/Gravity-Bold.eot#iefix') format('embedded-opentype'), url('../fonts//Gravity/Gravity-Bold/Gravity-Bold.woff') format('woff'), url('../fonts//Gravity/Gravity-Bold/Gravity-Bold.otf') format('woff'), url('../fonts//Gravity/Gravity-Bold/Gravity-Bold.ttf') format('truetype'), url('../fonts//Gravity/Gravity-Bold/Gravity-Bold.svg') format('svg');
+}
+@font-face {
+  font-family: 'Gravity-Black';
+  src: url('../fonts/Gravity/Gravity-Black/Gravity-Black.eot');
+  src: url('../fonts//Gravity/Gravity-Black/Gravity-Black.eot#iefix') format('embedded-opentype'), url('../fonts//Gravity/Gravity-Black/Gravity-Black.woff') format('woff'), url('../fonts//Gravity/Gravity-Black/Gravity-Black.otf') format('woff'), url('../fonts//Gravity/Gravity-Black/Gravity-Black.ttf') format('truetype'), url('../fonts//Gravity/Gravity-Black/Gravity-Black.svg') format('svg');
 }
 html {
   font-size: 1px;
 }
 body {
-  font-family: 'GloberThin';
+  font-family: 'Gravity-Light';
 }
 h1 {
   text-align: center;
@@ -72,13 +83,13 @@ nav a:focus::after {
 .image-head {
   width: 100%;
   height: 800px;
-  background-image: url('../images/background.png');
+  background-image: url('../images/background.jpg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: none;
 }
 .services {
-  background-image: url('../images/background_2.png');
+  background-image: url('../images/background_2.jpg');
   font-size: 24rem;
 }
 .gallery,
