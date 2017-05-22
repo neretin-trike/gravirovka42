@@ -1,0 +1,121 @@
+@green: #20ae88;
+@white: blue;
+
+
+.font(@fontName; @style) {
+  font-family: '@{style}';
+  src: url('../fonts/@{fontName}/@{style}/@{style}.eot');
+  src: url('../fonts//@{fontName}/@{style}/@{style}.eot#iefix') format('embedded-opentype'),
+        url('../fonts//@{fontName}/@{style}/@{style}.woff') format('woff'),
+        url('../fonts//@{fontName}/@{style}/@{style}.otf') format('woff'),
+        url('../fonts//@{fontName}/@{style}/@{style}.ttf') format('truetype'),
+        url('../fonts//@{fontName}/@{style}/@{style}.svg') format('svg');
+
+  // font-weight: @weight;
+  // font-style: @style;
+}
+
+@fontName: 'Gravity';
+// @fontName: 'SourceCodePro';
+
+@fontLight: '@{fontName}-Light';
+@fontRegular: '@{fontName}-Regular';
+@fontMedium: '@{fontName}-Medium';
+@fontBold: '@{fontName}-Bold';
+@fontBlack: '@{fontName}-Black';
+
+@font-face {
+  .font(@fontName,@fontLight);
+}
+@font-face {
+  .font(@fontName,@fontRegular);
+}
+@font-face {
+  .font(@fontName,@fontMedium);
+}
+@font-face {
+  .font(@fontName,@fontBold);
+}
+@font-face {
+  .font(@fontName,@fontBlack);
+}
+
+html {
+    font-size: 1px;
+}
+body {
+  font-family: @fontLight;
+}
+h1 {
+  text-align:center; 
+  font-size: 36rem;
+  padding-top:50px; 
+  padding-bottom:50px;
+  margin: 0;
+}
+
+nav {
+  position: absolute;
+  a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    font-size: 18rem;
+    padding: 8px 0;
+  }
+  a:hover,
+  a:focus {
+    outline: none;
+  }
+  a::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: @green;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+  a:hover::after,
+  a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+
+
+
+.image-head {
+    width: 100%;
+    height: 800px;
+    background-image: url('../images/background.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: none;
+}
+.services {
+      background-image: url('../images/background_2.jpg');
+      font-size: 24rem;
+}
+.gallery, 
+.prices {
+  background: @green;
+  color: @white;
+}
