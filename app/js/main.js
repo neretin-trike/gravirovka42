@@ -1,7 +1,7 @@
 
 $(window).on('load', function() {
 
-    $('.layer')
+    $('.layer,.luna-caption')
     .delay(250)
     .animate(
     {
@@ -9,13 +9,11 @@ $(window).on('load', function() {
     }, 750);
 
     $('.qhcmUktk_0')
-    
     .animate(
     {
         'stroke-dashoffset': 0,
         'stroke-width': 1,
-    },
-    {   
+    }, {   
         easing: "easeInOutQuint", 
         duration: 1000,
         complete: function () {
@@ -25,6 +23,39 @@ $(window).on('load', function() {
         }
      })
 
+    var requestOpen = false;
+
+    $(".request-call").click(function() {
+        if (!requestOpen)
+        {
+            $(this)
+            .animate(
+            {
+                'top': '-170px',
+                'height': '340px'
+            },250,"easeInOutQuint");
+
+            requestOpen = true;
+        }
+    });
+
+    $(".close-req").click(function() {
+        $(".request-call")
+        .animate(
+        {
+            'top': '-10px',
+            'height': '50px'
+        }, {
+            easing: "easeInOutQuint",
+            duration: 250,
+            complete: function() {
+                requestOpen = false;
+            }
+        });
+
+    });
+
 });
+
 
 

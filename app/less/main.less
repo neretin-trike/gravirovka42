@@ -1,6 +1,6 @@
 @green: #20ae88;
-@white: blue;
-
+@white: #f0f0f0;
+@dark:  #232631;
 
 .font(@fontName; @style) {
   font-family: '@{style}';
@@ -18,12 +18,16 @@
 @fontName: 'Gravity';
 // @fontName: 'SourceCodePro';
 
+@fontUltraLight: '@{fontName}-UltraLight';
 @fontLight: '@{fontName}-Light';
 @fontRegular: '@{fontName}-Regular';
 @fontMedium: '@{fontName}-Medium';
 @fontBold: '@{fontName}-Bold';
 @fontBlack: '@{fontName}-Black';
 
+@font-face {
+  .font(@fontName,@fontUltraLight);
+}
 @font-face {
   .font(@fontName,@fontLight);
 }
@@ -45,6 +49,7 @@ html {
 }
 body {
   font-family: @fontLight;
+  font-size: 14rem;
 }
 h1 {
   text-align:center; 
@@ -56,19 +61,35 @@ h1 {
 
 nav {
   z-index: 999;
+  margin: auto;
   position: absolute;
+  top: 15px; left: 0; right: 0;
+  width: 40%;
+  // background: purple;
+
+  ul{
+    padding: 0;
+    text-align: justify;
+  }
+
+  li{
+    display: inline-block;
+  }
+
+  ul::after {
+    width: 100%;
+    display: inline-block;
+    content: "";
+  }
+
   a {
     position: relative;
-    display: inline-block;
-    margin: 15px 25px;
+    display: block;
     outline: none;
     color: #fff;
     text-decoration: none;
-    text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 400;
-    text-shadow: 0 0 1px rgba(255,255,255,0.3);
-    font-size: 18rem;
+    font-size: 24rem;
     padding: 8px 0;
   }
   a:hover,
@@ -101,37 +122,25 @@ nav {
 }
 
 
-
-
 .image-head {
     width: 100%;
-    height: 800px;
+    height: 750px;
     background-image: url('../images/background.jpg');
-    background-position: 50% 50%;
+    background-position: 50% 0%;
     background-size: cover;
     background-repeat: none;
 
     .layer {
-    background-color: #232631;
-    position: absolute;
-    opacity: 0;
-    width: 100%;
-    height: inherit;
-}
-}
-.services {
-      background-image: url('../images/background_2.jpg');
-      font-size: 24rem;
-}
-.gallery, 
-.prices {
-  background: @green;
-  color: @white;
+      background-color: #232631;
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      height: inherit;
+    }
 }
 
-
-
-@circleR: 400px;
+@circleR: 440px;
+@lineHeight: 30px;
 .luna
 {
   position: relative;
@@ -140,17 +149,22 @@ nav {
   height: @circleR;
   top: 25%;
 
-    .luna-caption
-    {
+    .luna-caption{
+      opacity: 0;
       position: absolute;
-      top: @circleR/2-50;
+      top: @circleR/2-@lineHeight;
       left: 50px;
-      font-size: 36px;
       color: white;
       width: 150px;
-      line-height: 55px;
-    }
+      line-height: @lineHeight;
 
+      #caption-name{
+        font-size:50rem;
+      }
+      #caption-city{
+        font-size:25rem;
+      }
+    }
 }
 
 .qhcmUktk_0 
@@ -161,3 +175,172 @@ nav {
     stroke-width: 0;
 }
 
+.sub-menu{
+  color: @white;
+  background: @dark;
+  width: 100%;
+  height: 265px;
+
+  .contact{
+    width: 350px;
+    position: absolute;
+    height: inherit;
+    right: 0;
+    // background: purple;
+
+    .request-call{
+      z-index: 999;
+      
+      overflow: hidden;
+      cursor: pointer;
+      position: absolute;
+      top:-10px;
+      right: 20px;
+      width: 198px; //207px;
+      background: @white;
+
+      height: 50px;
+      background-image: url('../images/req-call.png');
+      background-repeat: no-repeat;
+
+      text-align: center;
+      line-height: 50px;
+      font-size: 20rem;
+      
+      .call-info{
+        font-size: 16rem;
+        color: @dark;
+        text-align: left;
+        
+        margin-top: 15px;
+        margin-left: 25px;
+        margin-right: 25px;
+
+        p{
+          margin: 0;
+        }
+
+        input{
+          display: block;
+          width: 145px;
+          outline: none;
+          background: @white;
+          border: none;
+          border-bottom: 1px solid lightgrey;
+          padding: 0;
+        }
+
+        button{
+          position: relative;
+          width: 145px;
+          top: 25px;
+          outline: none;
+          background: @white;
+          padding: 8px 0;
+          border-radius: 90px;
+          border: 1px solid @green;
+          font-family: @fontLight;
+        }
+
+        button:hover{
+          background: @green;
+          color: @white;
+        }
+
+      }
+
+      .close-req{
+        font-size: 16rem;
+        position: relative;
+        top: 30px;
+        color: @dark;
+      }
+    }
+
+    ul{
+      position: relative;
+      top: 60px;
+      right: 20px;
+      text-align: right;
+      padding: 0;
+      font-size: 18rem;
+      list-style-type: none;
+      line-height: 30px;
+
+      div{
+        position: relative;
+        top: 6px;
+        margin-left: 10px; 
+        width: 20px;
+        height: 20px;
+        // background: red;
+
+        display: inline-block;
+        float:right;
+      }
+
+      .phone{
+        background-image: url('../images/phone-icon.png');
+        background-size: cover;
+      }
+
+      .mail{
+        background-image: url('../images/mail-icon.png');
+        background-size: cover;
+      }
+
+      .vk{
+        background-image: url('../images/vk-icon.png');
+        background-size: cover;
+      }
+
+    }
+
+  }
+
+  .content{
+    position: relative;
+    margin: 0 auto;
+    width: @circleR+60;
+
+    div{
+      font-size: 20rem;
+      display: inline-block;
+      float: left;
+      // background: purple;
+
+      margin-left: 40px;
+      margin-top: 10px;
+
+      p{
+        color: @green;
+      }
+      ul{
+        padding: 0;
+        list-style-type: none;
+      }
+     
+      a{
+        line-height: 30px;
+        outline: none;
+        color: @white;
+        text-decoration: none;
+      }
+    }
+  }
+
+}
+
+
+
+
+.services {
+  background-image: url('../images/background_2.jpg');
+  height: 750px+265px;
+  font-size: 24rem;
+}
+.gallery, 
+.prices {
+  background: @green;
+  color: @white;
+}
