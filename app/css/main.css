@@ -270,8 +270,142 @@ nav a:focus::after {
 }
 .services {
   background-image: url('../images/background_2.jpg');
-  height: 1015px;
+  height: 1600px;
   font-size: 24rem;
+}
+.services h1 {
+  font-size: 64rem;
+  width: 75px;
+  text-align: left;
+  color: #20ae88;
+  margin-left: 76px;
+  line-height: 76px;
+}
+.services .content {
+  position: relative;
+  min-width: 738px;
+  width: 738px;
+  margin: 0 auto;
+}
+.services .content .left-service {
+  margin-top: 1px;
+  margin-bottom: 2px;
+}
+.services .content .left-service .outer {
+  display: inline-block;
+  float: left;
+  background: #20ae88;
+  border: 2px solid #20ae88;
+  width: 320px;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+  -ms-transform: skew(45deg);
+  -webkit-transform: skew(45deg);
+  transform: skew(45deg);
+}
+.services .content .left-service .outer div {
+  position: absolute;
+  left: -50px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 125%;
+  height: 125%;
+  -ms-transform: skew(-45deg);
+  -webkit-transform: skew(-45deg);
+  transform: skew(-45deg);
+}
+.services .content .left-service .outer #ring {
+  background-image: url('../images/services/ring.jpg');
+}
+.services .content .left-service .outer #award {
+  background-image: url('../images/services/award.jpg');
+}
+.services .content .left-service .outer #flash {
+  background-image: url('../images/services/flash.jpg');
+}
+.services .content .left-service .outer #leather {
+  background-image: url('../images/services/leather.jpg');
+}
+.services .content .left-service .line-skew {
+  display: inline-block;
+  float: left;
+  margin-left: 45px;
+  position: relative;
+  outline: 1px solid #20ae88;
+  width: 0px;
+  height: 160px;
+  -ms-transform: skew(45deg);
+  -webkit-transform: skew(45deg);
+  transform: skew(45deg);
+}
+.services .content .left-service .service-item {
+  display: inline-block;
+  float: left;
+  line-height: 32px;
+  font-size: 20rem;
+  width: 250px;
+}
+.services .content .right-service {
+  margin-top: 1px;
+  margin-bottom: 2px;
+}
+.services .content .right-service .outer {
+  display: inline-block;
+  float: right;
+  background: #20ae88;
+  border: 2px solid #20ae88;
+  width: 320px;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+  -ms-transform: skew(-45deg);
+  -webkit-transform: skew(-45deg);
+  transform: skew(-45deg);
+}
+.services .content .right-service .outer div {
+  position: absolute;
+  left: -30px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 125%;
+  height: 125%;
+  -ms-transform: skew(45deg);
+  -webkit-transform: skew(45deg);
+  transform: skew(45deg);
+}
+.services .content .right-service .outer #souvenir {
+  background-image: url('../images/services/souvenir.jpg');
+}
+.services .content .right-service .outer #jewelry {
+  background-image: url('../images/services/jewelry.jpg');
+}
+.services .content .right-service .outer #wood {
+  background-image: url('../images/services/wood.jpg');
+}
+.services .content .right-service .outer #signboard {
+  background-image: url('../images/services/signboard.jpg');
+}
+.services .content .right-service .line-skew {
+  display: inline-block;
+  float: right;
+  margin-right: 45px;
+  position: relative;
+  outline: 1px solid #20ae88;
+  width: 0px;
+  height: 160px;
+  -ms-transform: skew(-45deg);
+  -webkit-transform: skew(-45deg);
+  transform: skew(-45deg);
+}
+.services .content .right-service .service-item {
+  display: inline-block;
+  float: right;
+  line-height: 32px;
+  font-size: 20rem;
+  width: 250px;
 }
 .gallery,
 .prices {

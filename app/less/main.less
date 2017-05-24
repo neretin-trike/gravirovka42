@@ -298,7 +298,7 @@ nav {
 
   }
 
-  .content{
+.content{
     position: relative;
     margin: 0 auto;
     width: @circleR+60;
@@ -336,9 +336,173 @@ nav {
 
 .services {
   background-image: url('../images/background_2.jpg');
-  height: 750px+265px;
+  height: 1600px;
   font-size: 24rem;
+  
+    h1{
+      font-size: 64rem;
+      width: 75px;
+      text-align: left;
+      color: @green;
+      margin-left: 76px;
+      line-height: 76px;
+    }
+
+  .content{
+    position: relative;
+    min-width: 738px;
+    width: 738px;
+    // background: purple;
+    margin: 0 auto;
+
+    .left-service{
+      margin-top: 1px;
+      margin-bottom: 2px;
+
+      .outer{
+          display: inline-block;
+          float: left;
+
+          background: @green;
+          border:2px solid @green;
+          width: 320px;
+          height: 80px;
+          position: relative;
+          overflow: hidden;
+
+          -ms-transform: skew(45deg);
+          -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+
+          div{
+            position: absolute;
+            left:-50px;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            width:125%;
+            height:125%;  
+            -ms-transform: skew(-45deg);
+            -webkit-transform: skew(-45deg);
+            transform: skew(-45deg);
+          }
+          #ring{
+            background-image: url('../images/services/ring.jpg');
+          }
+          #award{
+            background-image: url('../images/services/award.jpg');
+          }
+          #flash{
+            background-image: url('../images/services/flash.jpg');
+          }
+          #leather{
+            background-image: url('../images/services/leather.jpg');
+          }
+
+        }
+
+        .line-skew{
+          display: inline-block;
+          float: left;
+          margin-left: 45px;
+                
+          position: relative;
+          outline:1px solid @green;
+          width: 0px;
+          height: 160px;
+
+          -ms-transform: skew(45deg);
+          -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+        }
+
+        .service-item{
+          display: inline-block;
+          float: left;
+          line-height: 32px;
+          // font-family: @fontRegular;
+          font-size: 20rem;
+          width: 250px;
+        }
+      }
+  
+    .right-service{
+      margin-top: 1px;
+      margin-bottom: 2px;
+
+      .outer{
+          display: inline-block;
+          float: right;
+
+          background: @green;
+          border:2px solid @green;
+          width: 320px;
+          height: 80px;
+          position: relative;
+          overflow: hidden;
+
+          -ms-transform: skew(-45deg);
+          -webkit-transform: skew(-45deg);
+          transform: skew(-45deg);
+
+          div{
+            position: absolute;
+            left:-30px;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            width:125%;
+            height:125%;  
+            -ms-transform: skew(45deg);
+            -webkit-transform: skew(45deg);
+            transform: skew(45deg);
+          }
+          #souvenir{
+            background-image: url('../images/services/souvenir.jpg');
+          }
+          #jewelry{
+            background-image: url('../images/services/jewelry.jpg');
+          }
+          #wood{
+            background-image: url('../images/services/wood.jpg');
+          }
+          #signboard{
+            background-image: url('../images/services/signboard.jpg');
+          }
+
+        }
+
+        .line-skew{
+          display: inline-block;
+          float: right;
+          margin-right: 45px;
+                
+          position: relative;
+          outline:1px solid @green;
+          width: 0px;
+          height: 160px;
+
+          -ms-transform: skew(-45deg);
+          -webkit-transform: skew(-45deg);
+          transform: skew(-45deg);
+        }
+
+        .service-item{
+          display: inline-block;
+          float: right;
+          line-height: 32px;
+          // font-family: @fontRegular;
+          font-size: 20rem;
+          width: 250px;
+        }
+      }
+
+  }
 }
+
+
+
+
 .gallery, 
 .prices {
   background: @green;
