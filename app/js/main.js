@@ -1,4 +1,13 @@
 
+$(window).bind('scroll',function(e){
+    parallaxScroll();
+});
+ 
+function parallaxScroll(){
+    var scrolled = $(window).scrollTop();
+    $('.services').css('background-position-y',(0-(scrolled*.35))+'px');
+}
+
 $(window).on('load', function() {
 
     $('.layer,.luna-caption')
@@ -55,6 +64,7 @@ $(window).on('load', function() {
 
     });
 
+    // $.scrollSpeed(100, 500, 'easeOutQuint');
 });
 
 
