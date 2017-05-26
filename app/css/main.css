@@ -42,6 +42,11 @@ h1 {
   padding-bottom: 50px;
   margin: 0;
 }
+.max-width {
+  margin: auto;
+  position: relative;
+  max-width: 1366px;
+}
 nav {
   z-index: 999;
   margin: auto;
@@ -49,7 +54,8 @@ nav {
   top: 15px;
   left: 0;
   right: 0;
-  width: 40%;
+  padding: 0 20px;
+  max-width: 1200px;
 }
 nav ul {
   padding: 0;
@@ -163,10 +169,8 @@ nav a:focus::after {
   top: -10px;
   right: 20px;
   width: 198px;
-  background: #f0f0f0;
   height: 50px;
-  background-image: url('../images/req-call.png');
-  background-repeat: no-repeat;
+  background: #f0f0f0 url('../images/req-call.png') no-repeat;
   text-align: center;
   line-height: 50px;
   font-size: 20rem;
@@ -175,9 +179,7 @@ nav a:focus::after {
   font-size: 16rem;
   color: #232631;
   text-align: left;
-  margin-top: 15px;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin: 15px 25px 0 25px;
 }
 .sub-menu .contact .request-call .call-info p {
   margin: 0;
@@ -232,7 +234,7 @@ nav a:focus::after {
   float: right;
 }
 .sub-menu .contact ul .phone {
-  background-image: url('../images/phone-icon.png');
+  background: url('../images/phone-icon.png');
   background-size: cover;
 }
 .sub-menu .contact ul .mail {
@@ -275,16 +277,15 @@ nav a:focus::after {
 }
 .services h1 {
   font-size: 64rem;
-  width: 75px;
+  width: 204px;
   text-align: left;
   color: #20ae88;
-  margin-left: 76px;
+  margin-left: 20px;
   line-height: 76px;
 }
 .services .content {
   position: relative;
-  min-width: 738px;
-  width: 738px;
+  max-width: 738px;
   margin: 0 auto;
 }
 .services .content .left-service {
@@ -411,4 +412,31 @@ nav a:focus::after {
 .prices {
   background: #20ae88;
   color: #f0f0f0;
+}
+.gallery .gallery-slider {
+  display: none;
+  min-height: 320px;
+}
+.gallery .gallery-first {
+  display: block;
+}
+.gallery .gallery-slider:target {
+  display: block;
+}
+.gallery .item img {
+  height: 250px;
+  width: auto;
+}
+.gallery .gallery-categories {
+  margin: auto;
+}
+.gallery .gallery-categories a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  width: 24%;
+  color: #f0f0f0;
+}
+.gallery .gallery-categories a:hover {
+  background: red;
 }

@@ -58,30 +58,31 @@ h1 {
   padding-bottom:50px;
   margin: 0;
 }
+.max-width {
+  margin: auto;
+  position: relative;
+  max-width: 1366px;
+}
 
 nav {
   z-index: 999;
   margin: auto;
   position: absolute;
   top: 15px; left: 0; right: 0;
-  width: 40%;
-  // background: purple;
-
-  ul{
+  padding:  0 20px;
+  max-width: 1200px;
+  ul {
     padding: 0;
     text-align: justify;
   }
-
-  li{
+  li {
     display: inline-block;
   }
-
   ul::after {
     width: 100%;
     display: inline-block;
     content: "";
   }
-
   a {
     position: relative;
     display: block;
@@ -121,7 +122,6 @@ nav {
   }
 }
 
-
 .image-head {
     width: 100%;
     height: 750px;
@@ -129,7 +129,6 @@ nav {
     background-position: 50% 0%;
     background-size: cover;
     background-repeat: none;
-
     .layer {
       background-color: #232631;
       position: absolute;
@@ -141,86 +140,69 @@ nav {
 
 @circleR: 440px;
 @lineHeight: 30px;
-.luna
-{
+.luna {
   position: relative;
   margin: 0 auto;
   width: @circleR;
   height: @circleR;
   top: 25%;
-
-    .luna-caption{
-      opacity: 0;
-      position: absolute;
-      top: @circleR/2-@lineHeight;
-      left: 50px;
-      color: white;
-      width: 150px;
-      line-height: @lineHeight;
-
-      #caption-name{
-        font-size:50rem;
-      }
-      #caption-city{
-        font-size:25rem;
-      }
+  .luna-caption {
+    opacity: 0;
+    position: absolute;
+    top: @circleR/2-@lineHeight;
+    left: 50px;
+    color: white;
+    width: 150px;
+    line-height: @lineHeight;
+    #caption-name {
+      font-size:50rem;
     }
+    #caption-city {
+      font-size:25rem;
+    }
+  }
 }
 
-.qhcmUktk_0 
-{
+.qhcmUktk_0 {
     stroke-dasharray:610 612;
     stroke-dashoffset:611;
     stroke-opacity: 1;
     stroke-width: 0;
 }
 
-.sub-menu{
+.sub-menu {
   color: @white;
   background: @dark;
   width: 100%;
   height: 265px;
-
-  .contact{
+  .contact {
     width: 350px;
     position: absolute;
     height: inherit;
     right: 0;
     // background: purple;
-
-    .request-call{
+    .request-call {
       z-index: 999;
-      
       overflow: hidden;
       cursor: pointer;
       position: absolute;
       top:-10px;
       right: 20px;
       width: 198px; //207px;
-      background: @white;
-
       height: 50px;
-      background-image: url('../images/req-call.png');
-      background-repeat: no-repeat;
-
+      background: @white url('../images/req-call.png') no-repeat;
       text-align: center;
       line-height: 50px;
       font-size: 20rem;
-      
-      .call-info{
+      .call-info {
         font-size: 16rem;
         color: @dark;
         text-align: left;
-        
-        margin-top: 15px;
-        margin-left: 25px;
-        margin-right: 25px;
-
-        p{
+        margin: 15px 25px 0 25px;
+        p {
           margin: 0;
         }
-
-        input{
+        input {
           display: block;
           width: 145px;
           outline: none;
@@ -229,8 +211,7 @@ nav {
           border-bottom: 1px solid lightgrey;
           padding: 0;
         }
-
-        button{
+        button {
           position: relative;
           width: 145px;
           top: 25px;
@@ -241,23 +222,19 @@ nav {
           border: 1px solid @green;
           font-family: @fontLight;
         }
-
-        button:hover{
+        button:hover {
           background: @green;
           color: @white;
         }
-
       }
-
-      .close-req{
+      .close-req {
         font-size: 16rem;
         position: relative;
         top: 30px;
         color: @dark;
       }
     }
-
-    ul{
+    ul {
       position: relative;
       top: 60px;
       right: 20px;
@@ -266,61 +243,50 @@ nav {
       font-size: 18rem;
       list-style-type: none;
       line-height: 30px;
-
-      div{
+      div {
         position: relative;
         top: 6px;
         margin-left: 10px; 
         width: 20px;
         height: 20px;
         // background: red;
-
         display: inline-block;
         float:right;
       }
-
-      .phone{
-        background-image: url('../images/phone-icon.png');
+      .phone {
+        background: url('../images/phone-icon.png');
         background-size: cover;
       }
-
-      .mail{
+      .mail {
         background-image: url('../images/mail-icon.png');
         background-size: cover;
       }
-
-      .vk{
+      .vk {
         background-image: url('../images/vk-icon.png');
         background-size: cover;
       }
-
     }
-
   }
 
-.content{
+.content {
     position: relative;
     margin: 0 auto;
     width: @circleR+60;
-
-    div{
+    div {
       font-size: 20rem;
       display: inline-block;
       float: left;
       // background: purple;
-
       margin-left: 40px;
       margin-top: 10px;
-
-      p{
+      p {
         color: @green;
       }
-      ul{
+      ul {
         padding: 0;
         list-style-type: none;
       }
-     
-      a{
+      a {
         line-height: 30px;
         outline: none;
         color: @white;
@@ -328,7 +294,6 @@ nav {
       }
     }
   }
-
 }
 
 
@@ -338,173 +303,181 @@ nav {
   background-image: url('../images/background_2.jpg');
   height: 1600px;
   font-size: 24rem;
-  
-    h1{
+    h1 {
       font-size: 64rem;
-      width: 75px;
+      width: 204px;
       text-align: left;
       color: @green;
-      margin-left: 76px;
+      margin-left: 20px;
       line-height: 76px;
     }
-
-  .content{
+  .content {
     position: relative;
-    min-width: 738px;
-    width: 738px;
-    // background: purple;
+    max-width: 738px;
+    //background: purple;
     margin: 0 auto;
-
-    .left-service{
+    .left-service {
       margin-top: 1px;
       margin-bottom: 2px;
-
-      .outer{
-          display: inline-block;
-          float: left;
-
-          background: @green;
-          border:2px solid @green;
-          width: 320px;
-          height: 80px;
-          position: relative;
-          overflow: hidden;
-
-          -ms-transform: skew(45deg);
-          -webkit-transform: skew(45deg);
-          transform: skew(45deg);
-
-          div{
-            position: absolute;
-            left:-50px;
-            background-size: cover;
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            width:125%;
-            height:125%;  
-            -ms-transform: skew(-45deg);
-            -webkit-transform: skew(-45deg);
-            transform: skew(-45deg);
-          }
-          #ring{
-            background-image: url('../images/services/ring.jpg');
-          }
-          #award{
-            background-image: url('../images/services/award.jpg');
-          }
-          #flash{
-            background-image: url('../images/services/flash.jpg');
-          }
-          #leather{
-            background-image: url('../images/services/leather.jpg');
-          }
-
-        }
-
-        .line-skew{
-          display: inline-block;
-          float: left;
-          margin-left: 45px;
-                
-          position: relative;
-          outline:1px solid @green;
-          width: 0px;
-          height: 160px;
-
-          -ms-transform: skew(45deg);
-          -webkit-transform: skew(45deg);
-          transform: skew(45deg);
-        }
-
-        .service-item{
-          display: inline-block;
-          float: left;
-          line-height: 32px;
-          // font-family: @fontRegular;
-          font-size: 20rem;
-          width: 250px;
-        }
-      }
-  
-    .right-service{
-      margin-top: 1px;
-      margin-bottom: 2px;
-
-      .outer{
-          display: inline-block;
-          float: right;
-
-          background: @green;
-          border:2px solid @green;
-          width: 320px;
-          height: 80px;
-          position: relative;
-          overflow: hidden;
-
-          -ms-transform: skew(-45deg);
-          -webkit-transform: skew(-45deg);
-          transform: skew(-45deg);
-
-          div{
-            position: absolute;
-            left:-30px;
-            background-size: cover;
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            width:125%;
-            height:125%;  
-            -ms-transform: skew(45deg);
-            -webkit-transform: skew(45deg);
-            transform: skew(45deg);
-          }
-          #souvenir{
-            background-image: url('../images/services/souvenir.jpg');
-          }
-          #jewelry{
-            background-image: url('../images/services/jewelry.jpg');
-          }
-          #wood{
-            background-image: url('../images/services/wood.jpg');
-          }
-          #signboard{
-            background-image: url('../images/services/signboard.jpg');
-          }
-
-        }
-
-        .line-skew{
-          display: inline-block;
-          float: right;
-          margin-right: 45px;
-                
-          position: relative;
-          outline:1px solid @green;
-          width: 0px;
-          height: 160px;
-
+      .outer {
+        display: inline-block;
+        float: left;
+        background: @green;
+        border: 2px solid @green;
+        width: 320px;
+        height: 80px;
+        position: relative;
+        overflow: hidden;
+        -ms-transform: skew(45deg);
+        -webkit-transform: skew(45deg);
+        transform: skew(45deg);                 // http://caniuse.com/#feat=transforms2d
+        div {
+          position: absolute;
+          left:-50px;
+          background-size: cover;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          width:125%;
+          height:125%;  
           -ms-transform: skew(-45deg);
           -webkit-transform: skew(-45deg);
           transform: skew(-45deg);
         }
-
-        .service-item{
-          display: inline-block;
-          float: right;
-          line-height: 32px;
-          // font-family: @fontRegular;
-          font-size: 20rem;
-          width: 250px;
+        #ring {
+          background-image: url('../images/services/ring.jpg');
+        }
+        #award {
+          background-image: url('../images/services/award.jpg');
+        }
+        #flash {
+          background-image: url('../images/services/flash.jpg');
+        }
+        #leather {
+          background-image: url('../images/services/leather.jpg');
         }
       }
-
+      .line-skew {
+        display: inline-block;
+        float: left;
+        margin-left: 45px;   
+        position: relative;
+        outline:1px solid @green;
+        width: 0px;
+        height: 160px;
+        -ms-transform: skew(45deg);
+        -webkit-transform: skew(45deg);
+        transform: skew(45deg);
+      }
+      .service-item {
+        display: inline-block;
+        float: left;
+        line-height: 32px;
+        // font-family: @fontRegular;
+        font-size: 20rem;
+        width: 250px;
+      }
+    }
+    .right-service {
+      margin-top: 1px;
+      margin-bottom: 2px;
+      .outer {
+        display: inline-block;
+        float: right;
+        background: @green;
+        border:2px solid @green;
+        width: 320px;
+        height: 80px;
+        position: relative;
+        overflow: hidden;
+        -ms-transform: skew(-45deg);
+        -webkit-transform: skew(-45deg);
+        transform: skew(-45deg);
+        div {
+          position: absolute;
+          left:-30px;
+          background-size: cover;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          width:125%;
+          height:125%;  
+          -ms-transform: skew(45deg);
+          -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+        }
+        #souvenir {
+          background-image: url('../images/services/souvenir.jpg');
+        }
+        #jewelry {
+          background-image: url('../images/services/jewelry.jpg');
+        }
+        #wood {
+          background-image: url('../images/services/wood.jpg');
+        }
+        #signboard {
+          background-image: url('../images/services/signboard.jpg');
+        }
+      }
+      .line-skew {
+        display: inline-block;
+        float: right;
+        margin-right: 45px; 
+        position: relative;
+        outline:1px solid @green;
+        width: 0px;
+        height: 160px;
+        -ms-transform: skew(-45deg);
+        -webkit-transform: skew(-45deg);
+        transform: skew(-45deg);
+      }
+      .service-item {
+        display: inline-block;
+        float: right;
+        line-height: 32px;
+        // font-family: @fontRegular;
+        font-size: 20rem;
+        width: 250px;
+      }
+    }
   }
 }
-
-
-
 
 .gallery, 
 .prices {
   background: @green;
   color: @white;
+}
+
+
+
+
+
+.gallery {
+
+  .gallery-slider {
+    display: none;
+    min-height:320px;
+  }
+  .gallery-first {
+    display: block;
+  }
+  .gallery-slider:target{
+    display:block;
+  }
+  .item img {
+    height: 250px;
+    width:auto;
+  }
+  .gallery-categories {
+    margin: auto;
+    a {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      width: 24%;
+      color: @white;
+    }
+    a:hover {
+      background: red;
+    }
+  }
 }

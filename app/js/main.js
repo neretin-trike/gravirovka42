@@ -61,11 +61,47 @@ $(window).on('load', function() {
                 requestOpen = false;
             }
         });
-
     });
+   // $(".gallery .gallery-slider:first-of-type").css({display: "block"});
 
+
+
+    history.pushState("", document.title, window.location.pathname);
+    $(".gallery-categories a").click(function() {
+        $('#wedding-rings').removeClass('gallery-first');
+    });
     // $.scrollSpeed(100, 500, 'easeOutQuint');
 });
 
+$(document).ready(function () {
+    arrGallery = [
+        [25, "wedding-rings"],
+        [29,"jewellery"],
+        [14, "dog-tags"],
+        [8, "raster-engraving"],
+        [9, "hours-engraving"],
+        [18, "wood-engraving"],
+        [10, "leather-engraving"],
+        [2, "technological-skins"],
+        [31, "trinkets"],
+        [3, "laser-cutting"],
+        [9, "else"],
+    ];
+    $.each(arrGallery, function(i, value) {
+        var cat = [];
+        for (j = 0; j<value[0]; j++) {
+            cat.push({addr: "images\\gallery\\" + value[1] + "\\py" + (j+1) + ".jpg"}); 
+        };
+         $("#" + value[1] + "Tmpl").template({cat}).appendTo("#" + value[1]);
+    });
 
+
+    $(".owl-carousel").owlCarousel({
+        margin:10,
+        loop:true,
+        autoWidth:true,
+        lazyLoad:true,
+        items:4
+    });
+});
 
