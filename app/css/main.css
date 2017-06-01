@@ -470,6 +470,12 @@ nav a:focus::after {
   font-size: 26rem;
   line-height: 36rem;
 }
+@media (max-width: 992px) {
+  .prices .prices-content .content div div:nth-child(2) {
+    width: 90%;
+    left: 36px;
+  }
+}
 .prices .prices-content .content .dot {
   position: relative;
   background: #f0f0f0;
@@ -485,10 +491,18 @@ nav a:focus::after {
 .prices .prices-content .costs {
   position: absolute;
   width: 40%;
+  min-width: 460px;
   top: -120px;
   right: 16px;
   text-align: center;
   color: #232631;
+}
+@media (max-width: 992px) {
+  .prices .prices-content .costs {
+    position: relative;
+    width: 100%;
+    right: 0;
+  }
 }
 .prices .prices-content .costs-inner {
   position: relative;
@@ -627,27 +641,30 @@ nav a:focus::after {
   background: #232631;
   margin: 28px auto;
 }
-.costs-top-in-1 {
+.prices .prices-content .costs-top-in-1 {
   position: absolute;
   width: 100%;
-  height: 20px;
   margin-top: -16px;
   background: #0f5945;
+  height: 20px;
   opacity: 0.03;
 }
-.costs-top-in-2 {
+.prices .prices-content .costs-top-in-2 {
   position: absolute;
   width: 100%;
-  height: 9px;
   margin-top: -16px;
   background: #0f5945;
+  height: 9px;
   opacity: 0.07;
 }
-.costs-top-in-3 {
+.prices .prices-content .costs-top-in-3 {
   position: absolute;
   width: 100%;
-  height: 3px;
   margin-top: -16px;
   background: #0f5945;
   opacity: 0.15;
+  height: 4px;
+}
+.prices span {
+  color: #20ae88 !important;
 }

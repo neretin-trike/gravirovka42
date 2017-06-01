@@ -340,6 +340,7 @@ nav {
           -ms-transform: skew(-45deg);
           -webkit-transform: skew(-45deg);
           transform: skew(-45deg);
+
         }
         #ring {
           background-image: url('../images/services/ring.jpg');
@@ -488,9 +489,9 @@ nav {
     font-size: 64rem;
     text-align: left;
     line-height: 76rem;
-      -webkit-text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-      -moz-text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    -webkit-text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    -moz-text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
   }
   .prices-content {
     background: @dark;
@@ -508,10 +509,13 @@ nav {
         display: inline-block;
       }
       div div:nth-child(2){
-        width: 50%;//~'calc(100% - 600px)';
+        width: 50%;
         font-size: 26rem;
         line-height: 36rem;
-
+        @media (max-width: 992px) {
+          width: 90%;
+          left: 36px;
+        }
       }
       .dot {
         position: relative; 
@@ -529,10 +533,16 @@ nav {
     .costs {
       position: absolute;
       width: 40%;
+      min-width: 460px;
       top:-120px; 
       right: 16px;
       text-align: center;
       color: @dark;
+      @media (max-width: 992px) {
+        position: relative;
+        width: 100%;
+        right: 0;
+      }
     }
     .costs-inner {
       position: relative;
@@ -672,35 +682,32 @@ nav {
       background: @dark;
       margin: 28px auto;
     }
-  }
-
-}
-
-
-.costs-top-in-1 {
+    .costs-top-in-1 {
   position: absolute;
   width: 100%;
-  height: 20px;
   margin-top: -16px; 
   background: @dark-green;
-  opacity: 0.03; //rgba(0,0,0,0.03);
-
+  height: 20px;
+  opacity: 0.03;
 }
-
 .costs-top-in-2 {
   position: absolute;
   width: 100%;
-  height: 9px;
   margin-top: -16px; 
-  background: @dark-green;//rgba(0,0,0,0.05);
+  background: @dark-green;
+  height: 9px;
   opacity: 0.07;
 }
 .costs-top-in-3 {
   position: absolute;
   width: 100%;
-  height: 3px;
   margin-top: -16px; 
   background: @dark-green;
   opacity: 0.15;
-  //rgba(0,0,0,0.25);
+  height: 4px;
+}
+  }
+  span {
+    color: @green !important;
+  }
 }
